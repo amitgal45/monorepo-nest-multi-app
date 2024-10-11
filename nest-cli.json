@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/payments-solid-nestjs/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/payments-solid-nestjs/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/payments-solid-nestjs",
+  "projects": {
+    "payments-solid-nestjs": {
+      "type": "application",
+      "root": "apps/payments-solid-nestjs",
+      "entryFile": "main",
+      "sourceRoot": "apps/payments-solid-nestjs/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/payments-solid-nestjs/tsconfig.app.json"
+      }
+    },
+    "isr": {
+      "type": "application",
+      "root": "apps/isr",
+      "entryFile": "main",
+      "sourceRoot": "apps/isr/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/isr/tsconfig.app.json",
+        "webpack": true
+
+      }
+    },
+    "usa": {
+      "type": "application",
+      "root": "apps/usa",
+      "entryFile": "main",
+      "sourceRoot": "apps/usa/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/usa/tsconfig.app.json"
+      }
+    },
+    "payments": {
+      "type": "library",
+      "root": "libs/payments",
+      "entryFile": "index",
+      "sourceRoot": "libs/payments/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/payments/tsconfig.lib.json"
+      }
+    },
+    "auth": {
+      "type": "library",
+      "root": "libs/auth",
+      "entryFile": "index",
+      "sourceRoot": "libs/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/auth/tsconfig.lib.json"
+      }
+    },
+    "entities": {
+      "type": "library",
+      "root": "libs/entities",
+      "entryFile": "index",
+      "sourceRoot": "libs/entities/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/entities/tsconfig.lib.json"
+      }
+    },
+    "db": {
+      "type": "library",
+      "root": "libs/db",
+      "entryFile": "index",
+      "sourceRoot": "libs/db/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/db/tsconfig.lib.json"
+      }
+    },
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared/tsconfig.lib.json"
+      }
+    },
+    "user": {
+      "type": "library",
+      "root": "libs/user",
+      "entryFile": "index",
+      "sourceRoot": "libs/user/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/user/tsconfig.lib.json"
+      }
+    },
+    "config": {
+      "type": "library",
+      "root": "libs/config",
+      "entryFile": "index",
+      "sourceRoot": "libs/config/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/config/tsconfig.lib.json"
+      }
+    }
+  }
+}
