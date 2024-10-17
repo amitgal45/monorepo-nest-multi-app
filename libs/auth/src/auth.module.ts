@@ -6,7 +6,7 @@ import { AuthService } from './auth.service';
 import { LocalStrategy } from './strategies/local.strategy';
 import { JwtStrategy } from './strategies/jwt.strategy';
 import { Auth0Strategy } from './strategies/auth0.strategy';
-import { UserModule } from 'user/user';
+import { UserModule } from '@app/user';
 
 @Module({
   imports: [

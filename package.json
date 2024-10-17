@@ -98,7 +98,8 @@
       "^@app/entities(|/.*)$": "<rootDir>/libs/entities/src/$1",
       "^@app/db(|/.*)$": "<rootDir>/libs/db/src/$1",
       "^@app/shared(|/.*)$": "<rootDir>/libs/shared/src/$1",
-      "^@app/user(|/.*)$": "<rootDir>/libs/user/src/$1"
+      "^@app/user(|/.*)$": "<rootDir>/libs/user/src/$1",
+      "^@app/analytics(|/.*)$": "<rootDir>/libs/analytics/src/$1"
     }
   }
 }

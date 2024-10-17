@@ -7,6 +7,9 @@ import { PaymentModule } from '@app/payments';
 import { UserModule } from '@app/user';
 import * as path from 'path';
 import { validationSchema } from './config/validationSchema';
+import { AuthModule } from './auth/auth.module';
+import { AuthModule as BaseAuthModule } from '@app/auth';
+import { AnalyticsModule } from '@app/analytics';
 
 @Module({
   imports: [
@@ -27,6 +30,9 @@ import { validationSchema } from './config/validationSchema';
     DbModule,
     PaymentModule.forRoot(),
     UserModule,
+    BaseAuthModule,
+    AuthModule,
+    AnalyticsModule.forRootAsync(),
   ],
   controllers: [IsrController],
   providers: [IsrService],

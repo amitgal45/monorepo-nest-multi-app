@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { DbService } from './db.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 
@@ -20,7 +19,5 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
       inject: [ConfigService],
     }),
   ],
-  providers: [DbService],
-  exports: [DbService],
 })
 export class DbModule {}

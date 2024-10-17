@@ -47,6 +47,12 @@
       ],
       "@app/user/*": [
         "libs/user/src/*"
+      ],
+      "@app/analytics": [
+        "libs/analytics/src"
+      ],
+      "@app/analytics/*": [
+        "libs/analytics/src/*"
       ]
     }
   }

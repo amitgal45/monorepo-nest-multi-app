@@ -25,4 +25,7 @@ export const validationSchema = Joi.object({
   PAYPAL_CLIENT_ID: Joi.string().required(),
   PAYPAL_CLIENT_SECRET: Joi.string().required(),
   // Add other required variables here
+
+  GTM_API_KEY: Joi.string().required(),
+  APPSFLYER_API_KEY: Joi.string().required(),
 });
