@@ -28,4 +28,8 @@ export const validationSchema = Joi.object({
 
   GTM_API_KEY: Joi.string().required(),
   APPSFLYER_API_KEY: Joi.string().required(),
+
+  EMAIL_PROVIDER: Joi.string().valid('sendgrid').required(),
+  SENDGRID_API_KEY: Joi.string().required(),
+  SENDGRID_FROM_EMAIL: Joi.string().required(),
 });

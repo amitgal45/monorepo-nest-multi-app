@@ -53,6 +53,12 @@
       ],
       "@app/analytics/*": [
         "libs/analytics/src/*"
+      ],
+      "@app/email": [
+        "libs/email/src"
+      ],
+      "@app/email/*": [
+        "libs/email/src/*"
       ]
     }
   }

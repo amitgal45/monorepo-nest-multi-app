@@ -5,6 +5,7 @@ import {
   AnalyticsService,
   TrackAnalytics,
 } from '@app/analytics';
+import { EmailService } from '@app/email';
 
 @Controller('auth')
 export class AuthController {
@@ -12,6 +13,7 @@ export class AuthController {
     private readonly authService: AuthService,
     @Inject(AnalyticsService)
     private readonly analyticsService: AnalyticsService,
+    private readonly emailService: EmailService,
   ) {}
 
   @Post()
@@ -22,6 +24,25 @@ export class AuthController {
   async login(@Body() loginDto: any) {
     console.log('Hi');
     return { ...loginDto };
+  }
+
+  @Get('register')
+  @TrackAnalytics('user_register', [AnalyticsProviders.GTM])
+  async register(@Body() registerDto: any) {
+    console.log('Hi');
+    await this.emailService.sendTemplatedEmail({
+      to: 'info@amit-gal.dev',
+      templateId: 'welcome-email',
+      templateData: {
+        subscriber: {
+          // Add this wrapper
+          first_name: 'Amit',
+          membership_level: 'basic',
+          created_at: new Date(),
+        },
+      },
+    });
+    return { ...registerDto };
   }
 
   @Get('me')

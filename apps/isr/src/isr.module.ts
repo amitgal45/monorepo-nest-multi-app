@@ -10,6 +10,7 @@ import { validationSchema } from './config/validationSchema';
 import { AuthModule } from './auth/auth.module';
 import { AuthModule as BaseAuthModule } from '@app/auth';
 import { AnalyticsModule } from '@app/analytics';
+import { EmailModule } from '@app/email';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { AnalyticsModule } from '@app/analytics';
     BaseAuthModule,
     AuthModule,
     AnalyticsModule.forRootAsync(),
+    EmailModule.forRoot(),
   ],
   controllers: [IsrController],
   providers: [IsrService],
